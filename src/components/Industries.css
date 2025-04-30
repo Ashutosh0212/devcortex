@@ -1,0 +1,37 @@
+
+.industries-section {
+  background-color: var(--color-soft-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.industries-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: var(--gradient-secondary);
+  border-radius: 50%;
+  opacity: 0.05;
+  filter: blur(50px);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media screen and (max-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+}

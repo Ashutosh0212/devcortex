@@ -1,0 +1,63 @@
+
+.service-card {
+  background-color: var(--color-soft-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-lg);
+  background: var(--gradient-primary);
+  color: var(--color-soft-white);
+  font-size: var(--font-size-2xl);
+}
+
+.service-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark-blue);
+}
+
+.service-description {
+  color: var(--color-dark-blue);
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.service-link a {
+  color: var(--color-electric-blue);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: transform var(--transition-fast);
+}
+
+.service-link a:hover {
+  transform: translateX(5px);
+}
+
+.service-link a::after {
+  content: '→';
+  margin-left: var(--spacing-xs);
+  transition: transform var(--transition-fast);
+}
+
+.service-link a:hover::after {
+  transform: translateX(3px);
+}
